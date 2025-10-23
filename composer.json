@@ -1,0 +1,40 @@
+{
+    "name": "agrodep/laravel-api-response",
+    "description": "Response util for Laravel",
+    "type": "library",
+    "keywords": [
+        "php",
+        "laravel",
+        "api",
+        "response"
+    ],
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Agrodep\\ApiResponse\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "role": "Creator",
+            "name": "anvar",
+            "email": "mendasturchiman@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1|^8.2|^8.3",
+        "illuminate/contracts": "^v10.0|^v11.10|^v12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^v9.2|^v10",
+        "phpunit/phpunit": "^10.0|^11.2|^12.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Agrodep\\ApiResponse\\ResponseServiceProvider"
+            ]
+        }
+    }
+}
