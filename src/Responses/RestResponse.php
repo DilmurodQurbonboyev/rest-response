@@ -18,7 +18,7 @@ trait RestResponse {
         return response()->json([
             'success' => true,
             'data' => [...$data],
-            'msg' => $message
+            'message' => $message
         ]);
     }
 
@@ -32,7 +32,7 @@ trait RestResponse {
         return response()->json([
             'success' => true,
             'data' => [...$data],
-            'msg' => $message
+            'message' => $message
         ], 201);
     }
 
@@ -47,7 +47,7 @@ trait RestResponse {
         return response()->json([
             'success' => false,
             'errors' => $errors,
-            'msg' => $message
+            'message' => $message
         ], $status);
     }
 
@@ -61,7 +61,7 @@ trait RestResponse {
         return response()->json([
             'success' => false,
             'errors' => $errors,
-            'msg' => $message
+            'message' => $message
         ], 500);
     }
 
@@ -73,7 +73,7 @@ trait RestResponse {
     protected function unAuthorized(string $message = "Kirishga ruxsat berilmagan"): JsonResponse {
         return response()->json([
             'success' => false,
-            'msg' => $message
+            'message' => $message
         ], 401);
     }
 
@@ -89,7 +89,7 @@ trait RestResponse {
         return response()->json([
             'success' => true,
             'data' => $data,
-            'msg' => $message
+            'message' => $message
         ], options: JSON_NUMERIC_CHECK);
     }
 
@@ -112,7 +112,7 @@ trait RestResponse {
         return response()->json([
             'status' => true,
             'data' => new ListPaginator($data, $key),
-            'msg' => $message
+            'message' => $message
         ]);
     }
 
@@ -128,7 +128,7 @@ trait RestResponse {
         return response()->json([
             'status' => true,
             'data' => new IterationPaginator($key, $data, $extra),
-            'msg' => $message
+            'message' => $message
         ]);
     }
 }
